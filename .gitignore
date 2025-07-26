@@ -1,0 +1,26 @@
+# Ignore model files and large data
+*.h5
+*.pkl
+*.csv
+
+# But keep essential example templates if needed
+!sample_submission.csv
+!submission.csv 
+
+# Ignore notebooks checkpoints
+.ipynb_checkpoints/
+
+# Ignore Python cache
+__pycache__/
+*.py[cod]
+
+# VSCode/IDE specific
+.vscode/
+.idea/
+
+# System files
+.DS_Store*.h5
+*.pkl
+*.csv
+__pycache__/
+.ipynb_checkpoints/
