@@ -38,5 +38,4 @@ def predict_dnn(application: CreditApplication):
     X = preprocessor.transform(df)
     prob = dnn_model.predict(X)[0, 0]
     prediction = int(prob >= 0.1523)  # Same threshold as stacked model for consistency
-    return {"model": "dnn_model", "probability": float(prob), "prediction": prediction}
-
+    return {"model": "dnn_model", "probability": float(prob), "prediction": prediction} 
