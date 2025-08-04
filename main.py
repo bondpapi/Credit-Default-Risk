@@ -4,6 +4,7 @@ import joblib
 import pandas as pd
 import numpy as np
 import tensorflow as tf
+from typing import Dict, Union
 
 # === Load saved models and preprocessors ===
 model = joblib.load("stacked_model.pkl")
@@ -15,7 +16,8 @@ dnn_model = tf.keras.models.load_model("dnn_model.h5")
 
 # === Define input schema ===
 class CreditApplication(BaseModel):
-    data: dict
+    data: Dict[str, Union[int, float]]
+
 
 # === Initialize app ===
 app = FastAPI()
